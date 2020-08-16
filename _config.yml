@@ -38,6 +38,7 @@ plugins:
   - jekyll-seo-tag
 show_excerpts: true
 header_pages:
+  - tags.md
   - zh/index.md
   - about.markdown
 disqus:
