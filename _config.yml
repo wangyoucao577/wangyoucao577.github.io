@@ -27,6 +27,8 @@ url: "https://wangyoucao577.github.io" # the base hostname & protocol for your s
 # twitter_username: jekyllrb
 github_username:  wangyoucao577
 rss: RSS
+google_analytics: UA-175522462-1
+
 
 # Build settings
 theme: minima
