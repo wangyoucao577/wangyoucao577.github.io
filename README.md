@@ -30,3 +30,23 @@ $ bundle info --path minima
 # launch on local for debugging
 $ bundle exec jekyll serve --host 0.0.0.0
 ```
+
+### Create new post
+
+General rules:    
+- Name it by `YEAR-MONTH-DAY-title.md`, e.g., `2011-12-31-new-years-eve-is-awesome.md`. See more in [jekyll posts](https://jekyllrb.com/docs/posts/);    
+- Use `layout: post`;
+- Add `title: xxx` for display;  
+- Add useful layout tags, see more in [jekyll Front Matter](https://jekyllrb.com/docs/front-matter/).    
+
+Language specified rules: 
+- English
+  - put into `en/_posts`
+- 中文
+  - put into `zh/_posts`
+  - add `lang: zh` in front matter
+
+### TODO 
+- Archives
+- Tags
+- Link between posts if they're intent to be same post but only different in language    
