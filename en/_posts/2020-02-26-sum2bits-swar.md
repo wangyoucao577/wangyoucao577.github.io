@@ -1,9 +1,9 @@
 ---
 layout: post
 title: sum2bits - variable-precision SWAR algorithm
-tags: [OSRM, SWAR, Algorithm]
+tags: [OSRM, SWAR, Algorithm, C, C++]
 ---
-> This post is intend to understand a piece of code of the [OSRM project](http://project-osrm.org/), which firstly posted in [Telenav/open-source-spec/sum2bits-swar](https://github.com/Telenav/open-source-spec/blob/master/osrm/doc/sum2bits-swar.md).    
+> This post is intend to understand a piece of code of the [OSRM project](http://project-osrm.org/), which also posted in [Telenav/open-source-spec/sum2bits-swar](https://github.com/Telenav/open-source-spec/blob/master/osrm/doc/sum2bits-swar.md).    
 > Checkout [Project-OSRM/OSRM-backend](https://github.com/Project-OSRM/osrm-backend), [Telenav/osrm-backend](https://github.com/Telenav/osrm-backend) and [Telenav/open-source-spec](https://github.com/Telenav/open-source-spec) for more if you're interested.     
 
 When read the [.osrm.names](https://github.com/Telenav/open-source-spec/blob/master/osrm/doc/osrm-toolchain-files/map.osrm.names.md) processing related codes, I found a function named [sum2bits()](https://github.com/Telenav/osrm-backend/blob/b24b8a085dc10bea279ffb352049330beae23791/include/util/indexed_data.hpp#L94) that looks a little strange to me. It's used for **summation of 16 2-bit values using SWAR** according to comment, but what I can see in codes are a lot of bitwise operations with some magic numbers. It looks no sense to me.     
@@ -131,11 +131,9 @@ The Line `(B),(C),(D)` do exactly the same as the previous line `(A)`, except th
 ## Conclusion
 The **variable-precision SWAR algorithm** in this binary case is also knowns as **population count**, **popcount**, **sideways sum**, or **bit summation**. The concept comes from [Hamming weight](https://en.wikipedia.org/wiki/Hamming_weight), and there're a lot of CPUs provide built-in instructions to do it. This algorithm is the best solution if your processors lacking those features.    
 
-## Read more
+## References
 - [How does this algorithm to count the number of set bits in a 32-bit integer work?](https://stackoverflow.com/questions/22081738/how-does-this-algorithm-to-count-the-number-of-set-bits-in-a-32-bit-integer-work)
 - [How to count the number of set bits in a 32-bit integer?](https://stackoverflow.com/questions/109023/how-to-count-the-number-of-set-bits-in-a-32-bit-integer)
 - [Hamming weight - Efficient implementation](https://en.wikipedia.org/wiki/Hamming_weight#Efficient_implementation)
-- [Telenav/osrm-backend - sum2bits()](https://github.com/Telenav/osrm-backend/blob/b24b8a085dc10bea279ffb352049330beae23791/include/util/indexed_data.hpp#L94)
-- [Telenav/osrm-backend - unittest for sum2bits()](https://github.com/Telenav/osrm-backend/blob/b24b8a085dc10bea279ffb352049330beae23791/unit_tests/util/indexed_data.cpp#L22)
 - [binary literal notation](https://gcc.gnu.org/onlinedocs/gcc/Binary-constants.html)
 
