@@ -21,8 +21,7 @@
 title: Tech | Thinking
 email: wangyoucao577@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Reading, observing, talking to people, thinking, sharing. 
-  Doing the right things for the right reason in the right way! 
+  Reading, observing, talking to people, thinking, accumulating, sharing. - To solve problems!     
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://wangyoucao577.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
