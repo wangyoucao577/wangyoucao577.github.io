@@ -34,6 +34,8 @@ google_analytics: UA-175522462-1
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 show_excerpts: true
 header_pages:
   - zh/index.md
