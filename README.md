@@ -11,7 +11,7 @@ These docs may take a few hours to read, but it's valuable. After go through the
 
 ### Theme 
 I use the default theme [jekyll/minima](https://github.com/jekyll/minima) with a little customization:
-- use customized [footer.html](./_includes/footer.html) to removed some social contents;    
+- use customized [footer.html](./_includes/footer.html) to removed some social contents, as well as multi-line description support;    
 - use customized [home.html](./_layouts/home.html) and [home-zh.html](./_layouts/home-zh.html) to support independent English and 中文 pages;    
 
 Read more in [jekyll resources](https://jekyllrb.com/resources/) if you'd like to choose differernt themes or customize more on the theme you selected.    
