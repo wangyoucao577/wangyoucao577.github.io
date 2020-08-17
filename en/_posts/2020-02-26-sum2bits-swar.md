@@ -2,6 +2,7 @@
 layout: post
 title: sum2bits - variable-precision SWAR algorithm
 tags: [OSRM, SWAR, Algorithm, C, C++]
+excerpt_separator: <!--excerpt_separator-->
 ---
 > This post is intend to understand a piece of code of the [OSRM project](http://project-osrm.org/), which also posted in [Telenav/open-source-spec/sum2bits-swar](https://github.com/Telenav/open-source-spec/blob/master/osrm/doc/sum2bits-swar.md).    
 > Checkout [Project-OSRM/OSRM-backend](https://github.com/Project-OSRM/osrm-backend), [Telenav/osrm-backend](https://github.com/Telenav/osrm-backend) and [Telenav/open-source-spec](https://github.com/Telenav/open-source-spec) for more if you're interested.     
@@ -20,6 +21,7 @@ What does it exactly do? Let's try to understand it step-by-step.
     }
 ```
 
+<!--excerpt_separator-->
 ## Background 
 When processing [.osrm.names](https://github.com/Telenav/open-source-spec/blob/master/osrm/doc/osrm-toolchain-files/map.osrm.names.md), OSRM internally uses a `uint32_t` to store `16` seperate values for saving memory. In another word, every `2`-bits represents a independent value in the `uint32_t`, and each independent value will be `[0,3]` of course.     
 The `2`-bits value is used to record how many bytes will be sufficient to store a length of `char`s array, and OSRM need to get the summarization of them for calcuating something like `offset` later.    
