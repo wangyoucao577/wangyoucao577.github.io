@@ -1,6 +1,6 @@
 <span class="post-tags">{% if page.tags.size == 1 %}Tag: {% else %}Tags: {% endif %}
     {% for tag in page.tags %}
-      {% capture tag_url %}/tags/{{ tag | slugify }}/{% endcapture %}
+      {% capture tag_url %}/tags/{{ tag | slugify: "pretty" }}/{% endcapture %}
       <a href="{{ tag_url | relative_url }}">{{ tag }}</a>
       {% unless forloop.last %}, {% endunless %}
     {% endfor %}
