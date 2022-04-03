@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Undefined reference to `__xxx_finite` - why and how?
+title: Undefined reference to __xxx_finite - why and how?
 tags: [C, C++]
 excerpt_separator: <!--excerpt_separator-->
 ---
