@@ -19,6 +19,7 @@ Let's try to reproduce it step-by-step.
 First of all, I setup two different enviornment as below to reproduce this problem:     
 
 - `Debian 11`    
+
 ```bash
 $ gcc --version
 gcc (Debian 10.2.1-6) 10.2.1 20210110
@@ -33,6 +34,7 @@ $ ll /lib/x86_64-linux-gnu/libc-*.so
 ```
 
 - `Debian 10`    
+
 ```bash
 $ gcc --version
 gcc (Debian 8.3.0-6) 8.3.0
